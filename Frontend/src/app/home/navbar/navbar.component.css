@@ -1,0 +1,54 @@
+/* Navbar styles */
+
+/* Navbar background color and text color */
+.navbar {
+  background-color: #333; /* Set the background color */
+  color: #fff; /* Set the text color */
+}
+
+/* Branding (logo or text) styles */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-brand:hover {
+  color: #007bff; /* Change link text color on hover */
+}
+
+/* Navbar links */
+.navbar-nav .nav-item {
+  margin-right: 10px; /* Adjust spacing between navigation items */
+}
+
+.navbar-nav .nav-link {
+  color: #fff; /* Set link text color */
+  padding: 10px 20px; /* Adjust the padding as needed */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #007bff; /* Change link text color on hover */
+}
+
+/* Toggler button styles (for mobile) */
+.navbar-toggler-icon {
+  background-color: #fff; /* Set the color of the toggler icon */
+}
+
+/* Optional: Adjust the size and spacing of the toggler button */
+.navbar-toggler {
+  padding: 0.25rem 0.5rem;
+}
+
+/* Optional: Center the brand/logo */
+.navbar-brand {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Optional: Add a box shadow when the navbar is scrolled down */
+.navbar.scrolled {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}

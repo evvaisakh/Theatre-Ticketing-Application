@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <h2 class="text-primary">Login</h2>
+    <form #loginForm="ngForm" (ngSubmit)="login()">
+        <div class="input-container">
+            <label for="username">Email / Username</label>
+            <input type="email" class="form-control" id="username" placeholder="Enter Email/Username" name="username"
+                [(ngModel)]="User.email" #email="ngModel" [class.is-invalid]="email.invalid&&email.touched"
+                required="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
+            <small class="text-danger" [class.d-none]="email.valid || email.untouched">Enter valid
+                email/username</small>
+        </div>
+        <div class="input-container">
+            <label for="password">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Password" name="password"
+                [(ngModel)]="User.password" #password="ngModel" [class.is-invalid]="password.invalid&&password.touched"
+                required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$">
+            <small class="text-danger" [class.d-none]="password.valid || password.untouched">Enter valid
+                password</small>
+ 
+        </div>
+
+        <a routerLink="/signup" class="create-account">Create a New Account</a>
+        <br>
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+
+    </form>
+</div>
+
+<app-footer></app-footer>
+<app-min-footer></app-min-footer>

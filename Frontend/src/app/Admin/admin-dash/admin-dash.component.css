@@ -1,0 +1,9 @@
+.fa-fa-film {
+    color: white;
+}
+
+.signout {
+    position: fixed;
+    bottom: 70px;
+    cursor: pointer;
+}

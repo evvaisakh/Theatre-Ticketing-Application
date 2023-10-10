@@ -1,0 +1,27 @@
+<div class="search-bar">
+    <input type="text" [(ngModel)]="searchMovie" placeholder="Search Movies">
+</div>
+<div class="container mt-5 px-2">
+    <div class="row">
+        <div class="col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let movie of list | search:searchMovie ">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <img [src]="movie.image" class="card-img-top" alt="...">
+                    <h6>{{movie.moviename}}</h6>
+                    <a class="edit" [routerLink]="['/AdminDash/editdetails',movie._id]"><span
+                            class="material-symbols-outlined">
+                            movie_edit
+                        </span></a>
+                    <a class="delete" [routerLink]="['/AdminDashboard']"><span class="material-symbols-outlined"
+                            (click)="delete(movie._id)">
+                            delete_forever
+                        </span></a>
+                    <h6>{{movie.category}} , {{movie.languages}}</h6>
+                    <h6>Average Rating: {{ movie.averageRating }}</h6>
+                </div>
+            </div>
+            <br><br><br><br>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

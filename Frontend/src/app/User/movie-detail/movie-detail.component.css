@@ -1,0 +1,189 @@
+.card-img-top {
+    height: 350px;
+    width: 250px;
+}
+
+.card {
+    background-color: transparent;
+    border-color: transparent;
+
+    width: 1050px;
+}
+
+.container {
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+
+
+.card-img-top {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0%;
+    float: left;
+}
+
+.card-title {
+    font-size: 24px;
+    margin-top: 0px;
+    float: left;
+    margin-left: 60px;
+}
+
+.card-text {
+    font-size: 18px;
+    margin-top: 10px;
+    float: left;
+    text-align: left;
+
+}
+
+.card-text1 {
+    font-size: 18px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 60px;
+}
+
+.card-text2 {
+    font-size: 18px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 60px;
+}
+
+.card-text3 {
+    font-size: 18px;
+    margin-top: 10px;
+    float: left;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.back {
+    float: left;
+    margin-left: 20px;
+}
+
+.button-container {
+    margin-top: 46px;
+    text-align: center;
+    float: left;
+    margin-left: 60px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #f00b0b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #e65858;
+}
+
+.card-body {
+    float: left;
+}
+
+
+label {
+    font-weight: bold;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.rate {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.rate:hover {
+    background-color: #0056b3;
+}
+
+.ratediv {
+    float: left;
+}
+
+
+textarea {
+    width: 50%;
+    margin-left: 250px;
+}
+
+.he {
+    float: left;
+}
+
+/* Custom CSS for the card */
+.card1 {
+    margin: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #dbd6d6;
+    transition: transform 0.2s;
+
+    display: flex;
+    flex-direction: column;
+    /* Ensure content stacks vertically */
+    height: 100%;
+    /* Expand card to full height */
+
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-body1 {
+    padding: 20px;
+    margin: 0;
+    /* Remove any margin */
+    flex-grow: 1;
+    /* Allow content to expand to fill card */
+}
+
+.card-text1 {
+    font-size: 16px;
+    color: #0e0d0d;
+
+}
+
+.container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        width: 100%;
+    }
+}

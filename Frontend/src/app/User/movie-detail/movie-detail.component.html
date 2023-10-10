@@ -1,0 +1,63 @@
+<div class="d-flex justify-content-between">
+    <button class="btn"><i class="bi bi-backspace-fill" style="font-size: 2rem; color: cornflowerblue;"
+            routerLink="/UserDash/user-moviefetch"></i> </button>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-6">
+
+            <div class="card" *ngIf="movie">
+                <div class="card-body">
+                    <img [src]="imageSrc" class="card-img-top" alt="{{ movie.moviename }}"><br><br><br><br>
+                    <h5 class="card-title">{{ movie.moviename }}</h5><br><br>
+                    <h6 class="card-text1"><strong>Category:</strong> {{ movie.category }}</h6><br><br>
+                    <h6 class="card-text2"><strong>Languages:</strong> {{ movie.languages }}</h6><br><br>
+                    <h6 class="card-text2"><strong>Movie Time:</strong> {{ movie.time }}</h6><br><br>
+                    <h6 class="card-text2"><strong>Screen:</strong> {{ movie.screen }}</h6><br><br>
+                    <div class="button-container">
+                        <a routerLink="/UserDash/tktbooking/{{movie._id}}" class="button">Book Now</a>
+                    </div>
+                </div>
+                <div class="back">
+
+                    <h6 class="card-text"><strong>Cast:</strong> {{ movie.cast }}</h6><br><br>
+                    <h6 class="card-text3"><strong>Description:</strong> {{ movie.description }}</h6><br><br>
+                    <div class="ratediv">
+                        <h6 class="card-text"><strong>Average Rating:</strong> {{ averageRating }}</h6><br><br>
+                        <div class="form-group">
+                            <label for="userRating">Your Rating:</label>&nbsp;
+                            <input type="number" min="1" max="10" id="userRating" [(ngModel)]="userRating" />
+                            &nbsp;&nbsp;&nbsp;
+                            <button class="rate" (click)="rateMovie()">Rate</button>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <!-- Add a textarea for adding reviews -->
+                <div class="reviewText">
+                    <textarea class="form-control" rows="5" placeholder="Write your review here..."
+                        [(ngModel)]="userReview"></textarea><br>
+                    <button class="btn btn-primary mt-2  " (click)="addReview()">Submit Review</button>
+                </div>
+
+                <!-- Display fetched reviews -->
+                <div class="container">
+                    <h3 class="he">Top Reviews</h3><br><br>
+                    <div class="row">
+                        <div class="card1 col-md-4" style="width: 18rem;" *ngFor="let review of reviews">
+                            <div class="card-body1">
+                                <div class="card-text1">{{ review.reviewText }}
+                                    <br>
+                                    <i class="bi bi-suit-heart-fill" style="color: red; float: left;"></i>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <i class="bi bi-hand-thumbs-up-fill"
+                                        style="color: royalblue; float: right;"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

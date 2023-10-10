@@ -1,0 +1,20 @@
+.copyright-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2px 0;
+  }
+  
+  .copyright-footer p {
+    font-size: 14px;
+    margin: 0;
+  }
+  
+  .copyright-footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .copyright-footer a:hover {
+    text-decoration: underline;
+    color: #007bff;
+  }
