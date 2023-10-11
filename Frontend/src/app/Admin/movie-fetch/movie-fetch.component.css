@@ -86,9 +86,8 @@
 .search-bar {
     display: flex;
     align-items: center;
-    margin-bottom: 50px;
-    margin-top: 30px;
-    margin-left: 38%;
+    margin-bottom: 2px;
+    margin-top: 2px;
 }
 
 .search-bar input {
@@ -96,7 +95,7 @@
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    width: 35%;
+    width: 30%;
     box-shadow: none;
     transition: border-color 0.3s ease-in-out;
 }
