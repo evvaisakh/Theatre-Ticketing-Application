@@ -7,6 +7,9 @@ app.use(morgan('dev'));
 const cors = require('cors');
 app.use(cors());
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 const PORT = 3000;
 
 const api = require('./routes/router');
